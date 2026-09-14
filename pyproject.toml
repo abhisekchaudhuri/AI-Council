@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "ai_council"
+version = "0.1.0"
+description = "Orchestration of ChatGPT, Gemini, and Claude agents"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+openai = "*"
+google-generativeai = "*"
+anthropic = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+pytest-mock = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
