@@ -1,4 +1,12 @@
 import sys
+import os
+
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
 from agents.intent_extractor import extract_intent
 from agents.gemini_collector import collect
 from agents.claude_critic import critique
@@ -16,6 +24,6 @@ def run(prompt: str) -> str:
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python orchestrator.py \"<prompt>\"")
+        print('Usage: python orchestrator.py "<prompt>"')
         sys.exit(1)
     print(run(sys.argv[1]))
